@@ -94,10 +94,6 @@ describe("plugin catalog items", () => {
 
     expect(getPluginCatalogSourceKey(official)).toBe("official");
     expect(getPluginCatalogSourceKey(community)).toBe("verified");
-    expect(getPluginCatalogSourceKey({
-      id: "listed",
-      marketplaceEntry: marketplaceEntry({ id: "com.example.tasks", publisher: undefined, listing: "community" }),
-    })).toBe("community");
     expect(getPluginCatalogSourceKey(github)).toBe("github");
   });
 

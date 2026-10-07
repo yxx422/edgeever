@@ -38,7 +38,6 @@ import { markdownToDoc } from "@edgeever/shared";
 import type { EdgeEverRepository } from "@/lib/repository";
 import { WebPluginSecretStore, type PluginSecretStorage } from "@/lib/plugins/plugin-secret-store";
 import { WebPluginPackageStore, type CachedPluginPackage, type PluginPackageStorage } from "@/lib/plugins/plugin-package-store";
-import { isPluginIdRevoked } from "@/lib/plugins/community-registry-store";
 import { downloadGithubExtension, downloadPinnedGithubExtension, extensionManifestsEqual, parseGithubRepositoryUrl, sha256Hex } from "@/lib/plugins/github-plugin-distribution";
 import {
   catalogInstallSource,
@@ -690,9 +689,6 @@ export class EdgeEverPluginHost {
     source: ExtensionInstallSource,
     pluginPackage: CachedPluginPackage | null,
   ) {
-    if (await isPluginIdRevoked(manifest.id)) {
-      throw new Error(`Extension ${manifest.id} was revoked and can no longer be installed or updated.`);
-    }
     const previous = this.extensions.find((item) => item.manifest.id === manifest.id);
     const wasActive = this.activePlugins.has(manifest.id);
     if (pluginPackage) await this.packageStorage.put(pluginPackage);

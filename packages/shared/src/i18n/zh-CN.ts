@@ -765,8 +765,6 @@ export const zhCN = {
     imageCompressionAria: "是否压缩笔记内图片",
     showDescendantNotesTitle: "父笔记本中显示子笔记本笔记",
     showDescendantNotesAria: "是否在父笔记本中显示子笔记本中的笔记",
-    spellcheckTitle: "标记拼写错误",
-    spellcheckAria: "是否在笔记编辑器中用波浪线标记可能的拼写错误",
     aiSelectionMenuTitle: "选中文字时显示 AI 助手",
     aiSelectionMenuAria: "选中文字时是否显示 AI 助手入口",
     aiSpaceShortcutTitle: "空白段落按 Space 唤起 AI",
@@ -1015,7 +1013,6 @@ export const zhCN = {
     panelDescription: "此界面由已启用的受信任插件提供。",
     sources: {
       verified: "已验证",
-      community: "社区",
       github: "GitHub 自由安装",
       manifest: "Manifest 自由安装",
       marketplace: "市场安装",
@@ -1029,17 +1026,6 @@ export const zhCN = {
       officialAutoUpdate: "官方 · 自动更新",
       installVerified: "替换为验证版本",
       openRepository: "打开 {{name}} 的源代码仓库",
-      license: "许可证 {{spdx}}",
-      admissionNotice: "收录检查通过，不代表安全保证。",
-      revoked: "此插件已下架：{{reason}}。请停用它。",
-      submissionTitle: "提交社区插件",
-      submissionDocs: "社区插件仓库说明",
-      submissionHint: "预检只确认当前客户端能读取公开仓库的 Manifest 和 Release。许可证与源码检查在社区仓库的校验脚本里完成。",
-      submissionRepository: "要提交的 GitHub 仓库地址",
-      precheck: "预检",
-      precheckRunning: "正在预检…",
-      precheckPassed: "预检通过。请在社区仓库新增 plugins/{{id}}.json，并让其中的仓库地址和插件 ID 与这里一致。",
-      openSubmission: "打开提交说明",
     },
     toolbar: {
       open: "插件",
@@ -1268,7 +1254,6 @@ export const zhCN = {
       fr: "法语",
       de: "德语",
       pt: "葡萄牙语",
-      pl: "波兰语",
     },
     tone: "语气",
     tones: {
@@ -1361,13 +1346,11 @@ export const zhCN = {
           "zh-CN": "中文",
           en: "English",
           ja: "日本語",
-          pl: "Polski",
         },
         languageNames: {
           "zh-CN": "简体中文",
           en: "英文",
           ja: "日文",
-          pl: "波兰语",
         },
       },
       skills: {
@@ -1698,7 +1681,6 @@ export const zhCN = {
       toggleReadingProtection: { label: "切换阅读保护" },
       toggleEditorMode: { label: "切换编辑模式" },
       toggleOutline: { label: "显示/隐藏文档大纲" },
-      toggleSidebar: { label: "显示/隐藏侧边栏" },
     },
   },
   quickSwitcher: {
@@ -2518,7 +2500,7 @@ export const zhCN = {
     accessLevels: {
       full: {
         label: "完全访问",
-        description: "可读取、创建和修改所有笔记、笔记本、标签及附件，将笔记移入回收站，并用已配置的默认模型生成视频笔记总结。",
+        description: "可读取、创建和修改所有笔记、笔记本、标签及附件，并将笔记移入回收站。",
       },
       "read-only": {
         label: "只读访问",
@@ -2553,7 +2535,6 @@ export const zhCN = {
       "write:resources": "管理附件",
       "read:tags": "读取标签",
       "write:tags": "管理标签",
-      "ai:generate": "生成视频笔记总结",
     },
   },
   advancedPlay: {

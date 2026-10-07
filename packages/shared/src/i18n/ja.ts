@@ -765,8 +765,6 @@ export const ja = {
     imageCompressionAria: "ノート内の画像を圧縮する",
     showDescendantNotesTitle: "サブノートブックのノートを表示",
     showDescendantNotesAria: "親ノートブックにサブノートブックのノートを表示する",
-    spellcheckTitle: "スペルミスに下線を表示",
-    spellcheckAria: "ノートエディタでスペルミスの可能性がある語に下線を表示する",
     aiSelectionMenuTitle: "文字選択時に AI アシスタントを表示",
     aiSelectionMenuAria: "文字選択時に AI アシスタント操作を表示する",
     aiSpaceShortcutTitle: "空のブロックで Space から AI を開く",
@@ -1015,7 +1013,6 @@ export const ja = {
     panelDescription: "この画面は、有効な信頼済みプラグインが提供します。",
     sources: {
       verified: "検証済み",
-      community: "コミュニティ",
       github: "GitHub サイドロード",
       manifest: "Manifest サイドロード",
       marketplace: "マーケットプレイス導入",
@@ -1029,17 +1026,6 @@ export const ja = {
       officialAutoUpdate: "公式 · 自動更新",
       installVerified: "検証済みバージョンに置き換え",
       openRepository: "{{name}} のソースリポジトリを開く",
-      license: "ライセンス {{spdx}}",
-      admissionNotice: "収録時の確認であり、安全性の保証ではありません。",
-      revoked: "このプラグインはカタログから削除されました：{{reason}}。無効にしてください。",
-      submissionTitle: "コミュニティプラグインを提出",
-      submissionDocs: "コミュニティプラグインのリポジトリ",
-      submissionHint: "この事前確認は、公開リポジトリの Manifest と Release を現在のクライアントが読めることだけを見ます。ライセンスとソースの確認はコミュニティリポジトリで行います。",
-      submissionRepository: "提出する GitHub リポジトリの URL",
-      precheck: "事前確認",
-      precheckRunning: "事前確認中…",
-      precheckPassed: "事前確認に通りました。コミュニティリポジトリに plugins/{{id}}.json を追加し、リポジトリ URL とプラグイン ID を一致させてください。",
-      openSubmission: "提出手順を開く",
     },
     toolbar: {
       open: "プラグイン",
@@ -1268,7 +1254,6 @@ export const ja = {
       fr: "フランス語",
       de: "ドイツ語",
       pt: "ポルトガル語",
-      pl: "ポーランド語",
     },
     tone: "トーン",
     tones: {
@@ -1361,13 +1346,11 @@ export const ja = {
           "zh-CN": "中文",
           en: "English",
           ja: "日本語",
-          pl: "Polski",
         },
         languageNames: {
           "zh-CN": "簡体字中国語",
           en: "英語",
           ja: "日本語",
-          pl: "ポーランド語",
         },
       },
       skills: {
@@ -1698,7 +1681,6 @@ export const ja = {
       toggleReadingProtection: { label: "閲覧保護を切り替え" },
       toggleEditorMode: { label: "エディタモードを切り替え" },
       toggleOutline: { label: "ドキュメントアウトラインの表示/非表示" },
-      toggleSidebar: { label: "サイドバーの表示/非表示" },
     },
   },
   quickSwitcher: {
@@ -2520,7 +2502,7 @@ export const ja = {
     accessLevels: {
       full: {
         label: "フルアクセス",
-        description: "すべてのノート、ノートブック、タグ、添付の読み取り、作成、編集、ノートのゴミ箱移動、および設定済みの既定モデルによる動画ノートの要約ができます。",
+        description: "すべてのノート、ノートブック、タグ、添付の読み取り、作成、編集と、ノートのゴミ箱移動ができます。",
       },
       "read-only": {
         label: "読み取り専用",
@@ -2555,7 +2537,6 @@ export const ja = {
       "write:resources": "添付を管理",
       "read:tags": "タグを読む",
       "write:tags": "タグを管理",
-      "ai:generate": "動画ノートの要約を生成",
     },
   },
   advancedPlay: {

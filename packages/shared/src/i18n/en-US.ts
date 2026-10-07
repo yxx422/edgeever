@@ -765,8 +765,6 @@ export const enUS = {
     imageCompressionAria: "Compress note images",
     showDescendantNotesTitle: "Show notes from sub-notebooks",
     showDescendantNotesAria: "Show notes from sub-notebooks in parent notebooks",
-    spellcheckTitle: "Underline spelling mistakes",
-    spellcheckAria: "Underline possible spelling mistakes in the note editor",
     aiSelectionMenuTitle: "Show AI assistant when text is selected",
     aiSelectionMenuAria: "Show the AI assistant action when text is selected",
     aiSpaceShortcutTitle: "Open AI with Space in an empty block",
@@ -1015,7 +1013,6 @@ export const enUS = {
     panelDescription: "This interface is provided by an enabled trusted plugin.",
     sources: {
       verified: "Verified",
-      community: "Community",
       github: "GitHub sideload",
       manifest: "Manifest sideload",
       marketplace: "Marketplace install",
@@ -1029,17 +1026,6 @@ export const enUS = {
       officialAutoUpdate: "Official · auto-updates",
       installVerified: "Replace with verified version",
       openRepository: "Open the source repository for {{name}}",
-      license: "License {{spdx}}",
-      admissionNotice: "Passed the admission check. This is not a safety guarantee.",
-      revoked: "This plugin was removed from the catalog: {{reason}}. Disable it.",
-      submissionTitle: "Submit a community plugin",
-      submissionDocs: "Community plugin repository",
-      submissionHint: "This precheck only confirms that the current client can read a public repository Manifest and Release. License and source checks run in the community repository.",
-      submissionRepository: "GitHub repository URL to submit",
-      precheck: "Precheck",
-      precheckRunning: "Prechecking…",
-      precheckPassed: "Precheck passed. Add plugins/{{id}}.json in the community repository, using this same repository URL and plugin ID.",
-      openSubmission: "Open the submission instructions",
     },
     toolbar: {
       open: "Plugins",
@@ -1268,7 +1254,6 @@ export const enUS = {
       fr: "French",
       de: "German",
       pt: "Portuguese",
-      pl: "Polish",
     },
     tone: "Tone",
     tones: {
@@ -1361,13 +1346,11 @@ export const enUS = {
           "zh-CN": "中文",
           en: "English",
           ja: "日本語",
-          pl: "Polski",
         },
         languageNames: {
           "zh-CN": "Simplified Chinese",
           en: "English",
           ja: "Japanese",
-          pl: "Polish",
         },
       },
       skills: {
@@ -1698,7 +1681,6 @@ export const enUS = {
       toggleReadingProtection: { label: "Toggle reading protection" },
       toggleEditorMode: { label: "Switch editor mode" },
       toggleOutline: { label: "Show/hide document outline" },
-      toggleSidebar: { label: "Show/hide sidebar" },
     },
   },
   quickSwitcher: {
@@ -2520,7 +2502,7 @@ export const enUS = {
     accessLevels: {
       full: {
         label: "Full access",
-        description: "Read, create, and edit all notes, notebooks, tags, and attachments, move notes to trash, and generate video-note summaries with the workspace default model.",
+        description: "Read, create, and edit all notes, notebooks, tags, and attachments, and move notes to trash.",
       },
       "read-only": {
         label: "Read-only",
@@ -2555,7 +2537,6 @@ export const enUS = {
       "write:resources": "Manage attachments",
       "read:tags": "Read tags",
       "write:tags": "Manage tags",
-      "ai:generate": "Generate video-note summaries",
     },
   },
   advancedPlay: {

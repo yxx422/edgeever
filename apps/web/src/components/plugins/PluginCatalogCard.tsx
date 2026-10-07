@@ -16,7 +16,6 @@ import {
 import { getPluginDetailPath, hasPluginSettings, isPluginCardCommand } from "@/lib/plugins/plugin-navigation";
 import type { PluginUpdateInfo } from "@/lib/plugins/plugin-updates";
 import type { RegisteredPluginCommand } from "@/lib/plugins/plugin-host";
-import type { MarketplaceRevocation } from "@edgeever/plugin-api";
 
 const sourceBadgeClassName = "bg-slate-100 text-slate-700";
 
@@ -31,13 +30,11 @@ export const PluginCatalogCard = ({
   onUpdate,
   onRunCommand,
   onUninstall,
-  revocation,
 }: {
   item: PluginCatalogItem;
   update?: PluginUpdateInfo;
   commands: RegisteredPluginCommand[];
   pendingId: string | null;
-  revocation?: MarketplaceRevocation;
   onOpenPlugin?: (pluginId: string) => void;
   onToggle: (enabled: boolean) => void;
   onInstallMarketplace: () => void;
@@ -109,14 +106,6 @@ export const PluginCatalogCard = ({
             </div>
           ) : null}
           {description ? <p className="mt-1 line-clamp-2 text-xs leading-5 text-slate-500">{description}</p> : null}
-          {item.marketplaceEntry?.listing === "community" ? (
-            <p className="mt-1 text-xs leading-5 text-slate-500">
-              {item.marketplaceEntry.licenseSpdx
-                ? `${t("plugins.marketplace.license", { spdx: item.marketplaceEntry.licenseSpdx })} · `
-                : ""}
-              {t("plugins.marketplace.admissionNotice")}
-            </p>
-          ) : null}
         </div>
         <div className="flex shrink-0 items-center gap-1">
           {repositoryUrl ? (
@@ -139,11 +128,6 @@ export const PluginCatalogCard = ({
         </div>
       </div>
 
-      {revocation ? (
-        <div role="status" className="mt-2 text-xs leading-5 text-rose-700">
-          {t("plugins.marketplace.revoked", { reason: revocation.reason })}
-        </div>
-      ) : null}
       {extension?.error ? <div className="mt-2 text-xs text-rose-600">{extension.error}</div> : null}
 
       <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-3">
@@ -155,7 +139,7 @@ export const PluginCatalogCard = ({
             </Link>
           </Button>
         ) : null}
-        {update && !revocation ? (
+        {update ? (
           <Button
             size="sm"
             className="h-8 gap-1.5 text-xs"
@@ -166,7 +150,7 @@ export const PluginCatalogCard = ({
             {t("plugins.updates.update")}
           </Button>
         ) : null}
-        {!extension && item.marketplaceEntry && !revocation ? (
+        {!extension && item.marketplaceEntry ? (
           <Button
             size="sm"
             className="h-8 gap-1.5 text-xs"
@@ -177,7 +161,7 @@ export const PluginCatalogCard = ({
             {pendingId === marketplaceActionId ? t("plugins.installing") : t("plugins.install")}
           </Button>
         ) : null}
-        {replaceWithVerified && !update && !revocation ? (
+        {replaceWithVerified && !update ? (
           <Button
             size="sm"
             className="h-8 gap-1.5 text-xs"
